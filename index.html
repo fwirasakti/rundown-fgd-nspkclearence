@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rundown FGD NSPK & Clearance SPBE</title>
+<meta name="description" content="Jadwal FGD Penyusunan NSPK Tata Kelola SPBE dan BIM DJPS serta Konsinyasi Clearance SPBE TA 2027, 5–7 November 2026, Swiss-Belinn Bogor.">
+<meta name="theme-color" content="#0f2a4a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --surface-2:#eef2f7;
+    --ink:#0f1c2e; --ink-2:#4a5a70; --ink-3:#8492a6; --line:#dfe5ee;
+    --navy:#0f2a4a; --navy-2:#1b4170; --gold:#f2b632;
+    --r1:#1f6feb; --r1-soft:#e7f0ff; --r2:#d9730d; --r2-soft:#fff1e2;
+    --both:#5b6b82; --both-soft:#eef1f5;
+    --now:#12a150; --now-soft:#e5f7ec;
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0b1220; --surface:#121b2c; --surface-2:#1a2539;
+      --ink:#e8eef7; --ink-2:#a9b6c9; --ink-3:#6f7d92; --line:#243149;
+      --navy:#0a1c33; --navy-2:#173458;
+      --r1:#5b9cff; --r1-soft:#16284a; --r2:#f29a45; --r2-soft:#3a2614;
+      --both:#93a3ba; --both-soft:#1c2738;
+      --now:#3ccf7d; --now-soft:#123224;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0b1220; --surface:#121b2c; --surface-2:#1a2539;
+    --ink:#e8eef7; --ink-2:#a9b6c9; --ink-3:#6f7d92; --line:#243149;
+    --navy:#0a1c33; --navy-2:#173458;
+    --r1:#5b9cff; --r1-soft:#16284a; --r2:#f29a45; --r2-soft:#3a2614;
+    --both:#93a3ba; --both-soft:#1c2738;
+    --now:#3ccf7d; --now-soft:#123224;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    line-height:1.45; min-height:100vh;
+  }
+  .wrap{max-width:560px;margin:0 auto;padding:0 16px 40px}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#fff; padding:28px 16px 64px; position:relative; overflow:hidden;
+  }
+  .hero::after{
+    content:""; position:absolute; right:-60px; top:-60px; width:200px; height:200px;
+    border-radius:50%; border:28px solid rgba(242,182,50,.14);
+  }
+  .hero-inner{max-width:560px;margin:0 auto;position:relative;z-index:1}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);
+  }
+  .hero h1{font-size:21px;line-height:1.3;font-weight:800;margin:8px 0 14px;letter-spacing:-.01em}
+  .meta{display:flex;flex-direction:column;gap:8px;font-size:14px;color:#d6e2f2}
+  .meta div{display:flex;gap:10px;align-items:flex-start}
+  .meta svg{flex:none;margin-top:2px;opacity:.85}
+  .maps{
+    display:inline-flex;align-items:center;gap:6px;margin-top:14px;
+    background:rgba(255,255,255,.12);color:#fff;text-decoration:none;
+    padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;
+    border:1px solid rgba(255,255,255,.18);
+  }
+  .maps:active{transform:scale(.98)}
+
+  /* STATUS STRIP */
+  .status{
+    margin:-40px auto 0; position:relative; z-index:2;
+    background:var(--surface); border-radius:var(--radius);
+    box-shadow:0 8px 24px rgba(15,42,74,.12); padding:14px 16px;
+    display:flex; gap:12px; align-items:center; border:1px solid var(--line);
+  }
+  .status .dot{width:10px;height:10px;border-radius:50%;background:var(--ink-3);flex:none}
+  .status.live .dot{background:var(--now);box-shadow:0 0 0 0 var(--now);animation:pulse 1.8s infinite}
+  .status .s-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+  .status .s-text{font-size:14px;font-weight:600}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,161,80,.5)}70%{box-shadow:0 0 0 10px rgba(18,161,80,0)}100%{box-shadow:0 0 0 0 rgba(18,161,80,0)}}
+
+  /* CONTROLS */
+  .controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:16px 0 10px;margin-top:4px}
+  .days{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .day-btn{
+    border:1px solid var(--line);background:var(--surface);color:var(--ink-2);
+    border-radius:12px;padding:8px 4px;font:inherit;cursor:pointer;text-align:center;
+  }
+  .day-btn .d1{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+  .day-btn .d2{display:block;font-size:18px;font-weight:800;color:var(--ink)}
+  .day-btn[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#cfdcec}
+  .day-btn[aria-selected="true"] .d2{color:#fff}
+  .day-btn .today{display:block;font-size:10px;font-weight:700;color:var(--now);height:12px}
+  .day-btn[aria-selected="true"] .today{color:var(--gold)}
+
+  .rooms{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;
+    background:var(--surface-2);padding:4px;border-radius:12px}
+  .room-btn{
+    border:0;background:transparent;font:inherit;cursor:pointer;border-radius:9px;
+    padding:8px 6px;color:var(--ink-2);text-align:center;line-height:1.25;
+  }
+  .room-btn b{display:block;font-size:13px}
+  .room-btn span{display:block;font-size:11px;font-weight:500}
+  .room-btn[aria-selected="true"]{background:var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .room-btn[data-room="1"][aria-selected="true"] b{color:var(--r1)}
+  .room-btn[data-room="2"][aria-selected="true"] b{color:var(--r2)}
+  .room-btn[data-room="1"] b::before,.room-btn[data-room="2"] b::before{
+    content:"";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px
+  }
+  .room-btn[data-room="1"] b::before{background:var(--r1)}
+  .room-btn[data-room="2"] b::before{background:var(--r2)}
+
+  .room-title{margin:14px 2px 4px;font-size:13px;color:var(--ink-2)}
+  .room-title strong{color:var(--ink)}
+
+  /* TIMELINE */
+  .timeline{list-style:none;margin-top:8px;position:relative}
+  .timeline::before{content:"";position:absolute;left:52px;top:8px;bottom:8px;width:2px;background:var(--line)}
+  .item{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative;margin-bottom:10px}
+  .time{font-size:13px;font-weight:700;text-align:right;padding-top:14px;color:var(--ink)}
+  .time small{display:block;font-size:11px;font-weight:500;color:var(--ink-3)}
+  .item::after{
+    content:"";position:absolute;left:48px;top:18px;width:10px;height:10px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--both);
+  }
+  .item.r1::after{border-color:var(--r1)}
+  .item.r2::after{border-color:var(--r2)}
+
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:12px 14px;border-left:4px solid var(--both);
+  }
+  .item.r1 .card{border-left-color:var(--r1)}
+  .item.r2 .card{border-left-color:var(--r2)}
+  .card h3{font-size:15px;font-weight:700;line-height:1.35}
+  .tag{
+    display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+    padding:2px 8px;border-radius:999px;margin-bottom:6px;background:var(--both-soft);color:var(--both)
+  }
+  .item.r1 .tag{background:var(--r1-soft);color:var(--r1)}
+  .item.r2 .tag{background:var(--r2-soft);color:var(--r2)}
+  .people{margin-top:8px;display:flex;flex-direction:column;gap:6px}
+  .person{font-size:13px;color:var(--ink-2);display:grid;grid-template-columns:92px 1fr;gap:6px}
+  .person em{font-style:normal;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);padding-top:1px}
+  details{margin-top:8px;font-size:13px;color:var(--ink-2)}
+  summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:flex;align-items:center;gap:6px}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"›";display:inline-block;transition:transform .2s;font-size:16px;line-height:1;color:var(--ink-3)}
+  details[open] summary::before{transform:rotate(90deg)}
+  details ul{margin:6px 0 0 18px}
+  details li{margin:3px 0}
+
+  /* breaks */
+  .item.break .card{background:transparent;border:1px dashed var(--line);border-left:1px dashed var(--line);padding:9px 14px}
+  .item.break .card h3{font-size:13px;font-weight:600;color:var(--ink-3)}
+  .item.break::after{background:var(--line);border-color:var(--line);width:8px;height:8px;left:49px;top:16px}
+  .item.break .time{padding-top:9px;color:var(--ink-3);font-weight:600}
+
+  /* states */
+  .item.past .card,.item.past .time{opacity:.5}
+  .item.now .card{border-color:var(--now);border-left-color:var(--now);box-shadow:0 0 0 3px var(--now-soft)}
+  .item.now::after{border-color:var(--now);background:var(--now)}
+  .live-badge{
+    display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:800;letter-spacing:.05em;
+    text-transform:uppercase;color:var(--now);margin-left:6px;vertical-align:1px
+  }
+  .live-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--now)}
+
+  /* FOOTER */
+  .contact{
+    margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px
+  }
+  .contact h2{font-size:14px;font-weight:700;margin-bottom:6px}
+  .contact p{font-size:13px;color:var(--ink-2)}
+  .contact p a{color:var(--r1);font-weight:600;text-decoration:none}
+  .btn-back{
+    display:flex;justify-content:center;align-items:center;gap:8px;margin-top:12px;
+    background:var(--navy);color:#fff;text-decoration:none;border-radius:12px;padding:13px;font-weight:700;font-size:14px
+  }
+  .foot{text-align:center;font-size:11.5px;color:var(--ink-3);margin-top:18px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Rundown Kegiatan · Ditjen Prasarana Strategis</span>
+    <h1>FGD Penyusunan NSPK Tata Kelola SPBE dan BIM DJPS serta Konsinyasi Clearance SPBE TA 2027</h1>
+    <div class="meta">
+      <div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+        <span>Kamis–Sabtu, 5–7 November 2026</span>
+      </div>
+      <div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <span>Swiss-Belinn Bogor<br><small style="opacity:.8">Jl. Pajajaran Indah V, Baranangsiang, Bogor Timur, Bogor</small></span>
+      </div>
+    </div>
+    <a class="maps" href="https://www.google.com/maps/search/?api=1&query=Swiss-Belinn+Bogor" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      Buka di Maps
+    </a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="status" id="status">
+    <span class="dot"></span>
+    <div>
+      <div class="s-label" id="statusLabel">Status</div>
+      <div class="s-text" id="statusText">Memuat jadwal…</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="days" role="tablist" aria-label="Pilih hari" id="days"></div>
+    <div class="rooms" role="tablist" aria-label="Pilih ruang" id="rooms">
+      <button class="room-btn" data-room="1" role="tab"><b>Ruang 1</b><span>NSPK SPBE &amp; BIM</span></button>
+      <button class="room-btn" data-room="2" role="tab"><b>Ruang 2</b><span>Clearance SPBE TA 2027</span></button>
+    </div>
+  </div>
+
+  <p class="room-title" id="roomTitle"></p>
+  <ol class="timeline" id="timeline"></ol>
+
+  <section class="contact">
+    <h2>Narahubung</h2>
+    <p>Sdri. Vidia Chandra Dewi<br><a href="mailto:vidiachade@pu.go.id">vidiachade@pu.go.id</a></p>
+    <!-- Tambahkan nomor HP di sini bila narahubung sudah setuju dicantumkan untuk publik -->
+    <a class="btn-back" href="https://linktr.ee/FGD_NSPKdanClearenceSPBE">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+      Kembali ke Linktree
+    </a>
+  </section>
+
+  <p class="foot">Subdirektorat Data dan Informasi Prasarana Strategis<br>Direktorat Sistem dan Strategi Penyelenggaraan Prasarana Strategis<br>Jadwal dapat berubah sewaktu-waktu. Waktu dalam WIB.</p>
+</main>
+
+<script>
+(function(){
+  const MOD1 = "Ketua Tim Tata Kelola dan Sistem Informasi Bidang Prasarana Strategis";
+  const MOD2 = "Ketua Tim Data dan Informasi Bidang Prasarana Strategis";
+  const PEN1 = ["Praktisi TIK","Direktorat Keselamatan dan Keberlanjutan Konstruksi, Ditjen Bina Konstruksi","Direktorat Bina Teknik Bangunan Gedung dan Penyehatan Lingkungan, Ditjen Cipta Karya","Pusat Data dan Teknologi Informasi (Pusdatin)","Bagian Hukum dan Komunikasi Publik, Setditjen Prasarana Strategis"];
+  const PEN2 = ["Pusat Data dan Teknologi Informasi (Pusdatin)","Biro Perencanaan Anggaran dan Kerja Sama Luar Negeri, Setjen Kementerian PU"];
+
+  const NSPK = "Pembahasan Rancangan NSPK Tata Kelola SPBE dan BIM DJPS";
+  const CLR  = "Penyusunan Clearance SPBE TA 2027";
+
+  function pembahasan(s,e,lanjut,plenoMalam){
+    return [
+      {s,e,room:1,title:NSPK+(lanjut?" (Lanjutan)":""),
+        people: plenoMalam?[["Peserta","Seluruh peserta Ruang 1"]]:[["Pembahas","Tim Penyusun"],["Moderator",MOD1]],
+        penanggap: plenoMalam?null:PEN1},
+      {s,e,room:2,title:CLR+(lanjut?" (Lanjutan)":""),
+        people: plenoMalam?[["Peserta","Seluruh peserta Ruang 2"]]:[["Moderator",MOD2]],
+        penanggap: plenoMalam?null:PEN2}
+    ];
+  }
+  const brk = (s,e,title)=>({s,e,room:0,kind:"break",title});
+
+  const DAYS = [
+    {date:"2026-11-05", dow:"Kamis", num:"5", items:[
+      {s:"08:30",e:"09:00",room:0,title:"Registrasi Peserta",people:[["Lokasi","Ruang 1"]]},
+      {s:"09:00",e:"09:10",room:0,title:"Menyanyikan Indonesia Raya dan Mars Kementerian PU"},
+      {s:"09:10",e:"09:20",room:0,title:"Pembacaan Doa"},
+      {s:"09:20",e:"09:30",room:0,title:"Laporan Ketua Panitia"},
+      {s:"09:30",e:"10:00",room:0,title:"Arahan dan Pembukaan",people:[["Oleh","Plt. Direktur Sistem dan Strategi Penyelenggaraan Prasarana Strategis"]]},
+      {s:"10:00",e:"10:45",room:1,title:"Tata Kelola BIM pada Program Pembangunan Gedung di Ditjen Prasarana Strategis",
+        people:[["Narasumber","Praktisi BIM, Institut BIM Indonesia (iBIMi)"],["Moderator",MOD1]]},
+      {s:"10:45",e:"11:30",room:1,title:"Penyampaian Draft NSPK Tata Kelola SPBE dan BIM DJPS",
+        people:[["Narasumber","Praktisi TIK"],["Moderator",MOD1]]},
+      {s:"11:30",e:"12:00",room:1,title:"Diskusi dan Tanya Jawab"},
+      {s:"10:00",e:"10:45",room:2,title:"Kebijakan, Kriteria Penilaian, dan Panduan Pengisian Clearance SPBE Belanja TIK TA 2027",
+        people:[["Narasumber","Kementerian PANRB"],["Moderator",MOD2]]},
+      {s:"10:45",e:"11:30",room:2,title:"Aspek Teknis Evaluasi Belanja TIK dan Pemanfaatan Layanan Bersama dalam Pengisian Clearance SPBE TA 2027",
+        people:[["Narasumber","Kementerian Komunikasi dan Digital"],["Moderator",MOD2]]},
+      {s:"11:30",e:"12:00",room:2,title:"Diskusi dan Tanya Jawab"},
+      brk("12:00","13:00","ISHOMA · Istirahat, Sholat, Makan Siang"),
+      ...pembahasan("13:00","15:00",false),
+      brk("15:00","15:30","Coffee Break"),
+      ...pembahasan("15:30","18:00",true),
+      brk("18:00","19:00","ISHOMA · Istirahat, Sholat, Makan Malam"),
+      ...pembahasan("19:00","20:00",true,true)
+    ]},
+    {date:"2026-11-06", dow:"Jumat", num:"6", items:[
+      ...pembahasan("09:00","12:00",true),
+      brk("12:00","13:00","ISHOMA · Istirahat, Sholat, Makan Siang"),
+      ...pembahasan("13:00","15:00",true),
+      brk("15:00","15:30","Coffee Break"),
+      ...pembahasan("15:30","18:00",true),
+      brk("18:00","19:00","ISHOMA · Istirahat, Sholat, Makan Malam"),
+      ...pembahasan("19:00","20:00",true,true)
+    ]},
+    {date:"2026-11-07", dow:"Sabtu", num:"7", items:[
+      {s:"08:00",e:"12:00",room:0,title:"Check Out",people:[["Peserta","Seluruh peserta"]]}
+    ]}
+  ];
+
+  const ROOM_NAMES = {
+    1:"<strong>Ruang 1</strong> · FGD Penyusunan NSPK Tata Kelola SPBE dan BIM DJPS",
+    2:"<strong>Ruang 2</strong> · Konsinyasi Clearance SPBE TA 2027"
+  };
+
+  // ---- Waktu Jakarta (WIB) ----
+  function nowWIB(){
+    const p = new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Jakarta",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false})
+      .formatToParts(new Date()).reduce((a,x)=>(a[x.type]=x.value,a),{});
+    const h = p.hour==="24"?0:+p.hour;
+    return {date:`${p.year}-${p.month}-${p.day}`, min:h*60+(+p.minute)};
+  }
+  const toMin = t => { const [h,m]=t.split(":").map(Number); return h*60+m; };
+  const fmt = t => t.replace(":",".");
+
+  // ---- State ----
+  const store = {
+    get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+    set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+  };
+  const params = new URLSearchParams(location.search);
+  const now = nowWIB();
+  const todayIdx = DAYS.findIndex(d=>d.date===now.date);
+
+  let day = todayIdx>=0 ? todayIdx : 0;
+  if(params.get("hari") && DAYS[+params.get("hari")-1]) day = +params.get("hari")-1;
+  let room = +(params.get("ruang") || store.get("rundown_ruang") || 1);
+  if(room!==1 && room!==2) room = 1;
+
+  // ---- Render ----
+  const daysEl = document.getElementById("days");
+  DAYS.forEach((d,i)=>{
+    const b = document.createElement("button");
+    b.className="day-btn"; b.setAttribute("role","tab");
+    b.innerHTML = `<span class="d1">${d.dow}</span><span class="d2">${d.num} Nov</span><span class="today">${i===todayIdx?"Hari ini":""}</span>`;
+    b.onclick=()=>{day=i;render();};
+    daysEl.appendChild(b);
+  });
+  document.querySelectorAll(".room-btn").forEach(b=>{
+    b.onclick=()=>{room=+b.dataset.room;store.set("rundown_ruang",room);render();};
+  });
+
+  function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+  function render(){
+    [...daysEl.children].forEach((b,i)=>b.setAttribute("aria-selected",i===day));
+    document.querySelectorAll(".room-btn").forEach(b=>b.setAttribute("aria-selected",+b.dataset.room===room));
+    document.getElementById("roomTitle").innerHTML = ROOM_NAMES[room];
+
+    const d = DAYS[day];
+    const items = d.items.filter(it=>it.room===0||it.room===room).sort((a,b)=>toMin(a.s)-toMin(b.s));
+    const isToday = d.date===now.date;
+    const isPastDay = d.date < now.date;
+
+    const ol = document.getElementById("timeline");
+    ol.innerHTML = items.map(it=>{
+      const cls = ["item"];
+      if(it.kind==="break") cls.push("break");
+      else cls.push(it.room===1?"r1":it.room===2?"r2":"both");
+      let live=false;
+      if(isPastDay || (isToday && now.min>=toMin(it.e))) cls.push("past");
+      else if(isToday && now.min>=toMin(it.s) && now.min<toMin(it.e)){cls.push("now");live=true;}
+
+      const tag = it.kind==="break" ? "" :
+        `<span class="tag">${it.room===0?"Seluruh Peserta · Ruang 1":"Ruang "+it.room}</span>`;
+      const people = it.people ? `<div class="people">${it.people.map(p=>`<div class="person"><em>${esc(p[0])}</em><span>${esc(p[1])}</span></div>`).join("")}</div>` : "";
+      const pen = it.penanggap ? `<details><summary>Penanggap (${it.penanggap.length})</summary><ul>${it.penanggap.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></details>` : "";
+      return `<li class="${cls.join(" ")}">
+        <div class="time">${fmt(it.s)}<small>${fmt(it.e)}</small></div>
+        <div class="card">${tag}<h3>${esc(it.title)}${live?'<span class="live-badge">Berlangsung</span>':""}</h3>${people}${pen}</div>
+      </li>`;
+    }).join("");
+
+    updateStatus();
+    const liveEl = ol.querySelector(".item.now");
+    if(liveEl && !render._scrolled){ render._scrolled=true; setTimeout(()=>liveEl.scrollIntoView({behavior:"smooth",block:"center"}),300); }
+  }
+
+  function updateStatus(){
+    const st = document.getElementById("status");
+    const lbl = document.getElementById("statusLabel");
+    const txt = document.getElementById("statusText");
+    st.classList.remove("live");
+    const first = DAYS[0].date, last = DAYS[DAYS.length-1].date;
+    if(now.date < first){
+      const diff = Math.round((Date.parse(first)-Date.parse(now.date))/86400000);
+      lbl.textContent="Segera dimulai";
+      txt.textContent = diff===1 ? "Kegiatan dimulai besok, registrasi pukul 08.30 WIB" : `Kegiatan dimulai ${diff} hari lagi`;
+      return;
+    }
+    if(now.date > last){ lbl.textContent="Selesai"; txt.textContent="Kegiatan telah berakhir. Terima kasih atas partisipasinya."; return; }
+    const d = DAYS.find(x=>x.date===now.date);
+    const list = d.items.filter(it=>it.room===0||it.room===room).sort((a,b)=>toMin(a.s)-toMin(b.s));
+    const cur = list.find(it=>now.min>=toMin(it.s)&&now.min<toMin(it.e));
+    const nxt = list.find(it=>toMin(it.s)>now.min);
+    if(cur){
+      st.classList.add("live");
+      lbl.textContent = `Sedang berlangsung · Ruang ${room}`;
+      txt.textContent = `${fmt(cur.s)}–${fmt(cur.e)} · ${cur.title}`;
+    } else if(nxt){
+      lbl.textContent = `Berikutnya · Ruang ${room}`;
+      txt.textContent = `${fmt(nxt.s)} · ${nxt.title}`;
+    } else {
+      lbl.textContent="Hari ini"; txt.textContent="Sesi hari ini telah selesai.";
+    }
+  }
+
+  render();
+  setInterval(()=>{ Object.assign(now, nowWIB()); render(); }, 60000);
+})();
+</script>
+</body>
+</html>
